@@ -1,0 +1,50 @@
+/* body {
+    background-color: cornflowerblue;
+} */
+
+.navbar {
+    height: 5rem;
+    background-color: #ffffff !important;
+}
+
+.fa-compass {
+    color: #ff3366;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+.f-info-links a {
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-info-socials i {
+    font-size: 1.3rem;
+    margin-right: 1.3rem;
+}
+
+.f-info {
+    text-align: center;
+    height: 8rem;
+    background-color: cornsilk;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
