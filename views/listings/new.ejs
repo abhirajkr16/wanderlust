@@ -1,23 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
+<% layout("/layouts/boilerplate.ejs") %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wanderLust</title>
-</head>
+    <div class="container new-listing-container">
 
-<body>
-    <h3>Create a new listing</h3>
-    <form method="POST" action="/listings">
-        <input type="text" placeholder="enter title" name="listing[title]" value=""><br><br>
-        <textarea name="listing[description]" id="" placeholder="enter description" value=""></textarea><br><br>
-        <input type="text" placeholder="enter image URL/link" name="listing[image]" value=""><br><br>
-        <input type="number" placeholder="enter price" name="listing[price]" value=""><br><br>
-        <input type="text" placeholder="enter location" name="listing[location]" value=""><br><br>
-        <input type="text" placeholder="enter country" name="listing[country]" value=""><br><br>
-        <button>submit</button>
-    </form>
-</body>
+        <div class="listing-form-card">
 
-</html>
+            <h2 class="form-title">Create New Listing</h2>
+
+            <p class="form-subtitle">
+                Share your amazing place with travelers around the world.
+            </p>
+
+            <form action="/listings" method="POST">
+
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" name="listing[title]" placeholder="Cozy Beach House" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea name="listing[description]" rows="3" placeholder="Tell guests about your place..."
+                        required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Image URL</label>
+                    <input type="text" name="listing[image]" placeholder="https://example.com/image.jpg" required>
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label>Price</label>
+                        <input type="number" name="listing[price]" placeholder="₹1500" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Location</label>
+                        <input type="text" name="listing[location]" placeholder="Delhi" required>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label>Country</label>
+                    <input type="text" name="listing[country]" placeholder="India" required>
+                </div>
+
+                <button class="listing-btn">
+                    Publish Listing
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
